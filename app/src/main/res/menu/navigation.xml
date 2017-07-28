@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_wisata_alam"
+        android:icon="@drawable/ic_public_24dp"
+        android:title="@string/title_wisata_alam" />
+
+    <item
+        android:id="@+id/navigation_wisata_kuliner"
+        android:icon="@drawable/ic_restaurant_24dp"
+        android:title="@string/title_wisata_kuliner" />
+
+    <item
+        android:id="@+id/navigation_wisata_budaya"
+        android:icon="@drawable/ic_spa_24dp"
+        android:title="@string/title_wisata_budaya" />
+
+    <item
+        android:id="@+id/navigation_wisata_belaja"
+        android:icon="@drawable/ic_shopping_cart_24dp"
+        android:title="@string/title_wisata_belanja" />
+
+</menu>

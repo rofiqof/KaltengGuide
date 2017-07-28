@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="apps.kaltengguide.rofiqoff.com.kaltengguide">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <permission
+        android:name="apps.kaltengguide.rofiqoff.com.kaltengguide.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="apps.kaltengguide.rofiqoff.com.kaltengguide.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".view.SpashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fragmentspinner.barito.fragmenttab.wisata.BottomBarBaritoActivity"
+            android:label="@string/title_activity_bottom_bar_barito" />
+        <activity
+            android:name=".detail.view.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".view.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="apps.kaltengguide.rofiqoff.com.kaltengguide.view.MainActivity" />
+        </activity>
+        <activity
+            android:name=".detail.video.VideoActivity"
+            android:label="@string/title_activity_video"
+            android:parentActivityName=".detail.view.DetailActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="apps.kaltengguide.rofiqoff.com.kaltengguide.detail.view.DetailActivity" />
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".detail.mapactivity.MapsActivity"
+            android:label="@string/title_activity_maps">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="apps.kaltengguide.rofiqoff.com.kaltengguide.detail.view.DetailActivity" />
+        </activity>
+        <activity android:name=".view.MainActivity" />
+        <activity android:name=".view.TentangActivity" />
+        <activity
+            android:name=".detail.view.DetailBandaraActivity"
+            android:label="@string/title_activity_detail_bandara"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".detail.view.DetailTravelActivity"
+            android:label="@string/title_activity_detail_travel"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".detail.view.DetailHotelActivity"
+            android:label="@string/title_activity_detail_hotel"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".fragmentspinner.barito.fragmenttab.penginapan.PenginapanActivity"
+            android:label="@string/title_activity_penginapan" />
+        <activity
+            android:name=".DActivity"
+            android:label="@string/title_activity_d"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".detail.webview.WebViewActivity"
+            android:label="@string/title_activity_web_view"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

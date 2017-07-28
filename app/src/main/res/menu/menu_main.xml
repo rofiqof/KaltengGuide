@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="apps.kaltengguide.rofiqoff.com.kaltengguide.view.MainActivity">
+
+    <item
+        android:id="@+id/action_masukan"
+        android:orderInCategory="100"
+        android:title="@string/action_masukan"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_tentang"
+        android:orderInCategory="100"
+        android:title="@string/action_about"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_bandara"
+        android:title="@string/action_bandara"
+        android:icon="@drawable/ic_local_airport_24dp"
+        app:showAsAction="always"/>
+
+</menu>
